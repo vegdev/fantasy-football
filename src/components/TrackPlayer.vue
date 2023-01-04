@@ -8,13 +8,24 @@ const props = defineProps({
   trackNumber: {
     type: Number,
     required: true,
+  },
+  isPlaying: {
+    type: Boolean,
+    required: true,
+    default: false
   }
 });
 
-const emit = defineEmits(['togglePlay'])
+const emit = defineEmits(['togglePlay', 'pressStop'])
 
-const handleTogglePlay = () => {
-  emit('togglePlay', props.trackNumbe)
+const handlePressPlay = () => {
+  emit('togglePlay', props.trackNumber)
+  console.log('props.trackNumber =', props.trackNumber);
+}
+
+const handlePressStop = () => {
+  emit('pressStop');
+  console.log('stop has been pressed');
 }
 </script>
 
@@ -22,9 +33,16 @@ const handleTogglePlay = () => {
   <div class="player">
     <code>{{ trackNumber }}. {{ trackName }}</code>
     <div class="track-controls">
-      <i :id="`play-track-${trackNumber}`" class="play" @click="handleTogglePlay">{{ false ? '⏸' : '▶' }}</i>
-      <!-- could also do @click="$emit('togglePlay')" -->
-      <i :id="`stop-track-${trackNumber}`" class="stop" @click="pressStop">⏹</i>
+      <div v-if="isPlaying == true">
+        <i :id="`pause-track-${trackNumber}`" class="play" @click="handlePressPause">⏸</i>
+      </div>
+      <div v-else>
+        <i :id="`play-track-${trackNumber}`" class="pause" @click="handlePressPlay">▶</i>
+      </div>
+      <div>
+        <!-- could also do @click="$emit('togglePlay')" -->
+        <i :id="`stop-track-${trackNumber}`" class="stop" @click="handlePressStop">⏹</i>
+      </div>
     </div>
   </div>
 </template>

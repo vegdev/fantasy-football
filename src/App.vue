@@ -3,81 +3,54 @@ import HelloWorld from './components/HelloWorld.vue';
 import TrackPlayer from './components/TrackPlayer.vue';
 import tracks from './tracks.json';
 import { Howl, Howler } from 'howler';
+
 /*
-const tracks = [
-    'Old Toronto',
-    'Renegade Serenade',
-    'Golden Auto Mile',
-    'Passengers on the Tide', 
-    'Lightning Land',
-    'Neverending Stories',
-    'Flesh of the Gods',
-    'Castles Made of Sand',
-    'Windstar'
-]
+SHAPE OF TRACKS: 
+ID
+ARTIST
+TITLE
+SRC
 */
 
-/* Old Setup Function:
-
-import { ref } from 'vue';
-export default {
-  setup() {
-    const name = ref('Kyle')
-    const age = ref(35)
-
-    return {
-      name,
-      age
-    }
-  },
-  components: {
-    TrackPlayer,
-    HelloWorld
-}
- 
-*/
-
-
-// create array of Howl objects
-const howls = []
+// add howl obj to track 
 tracks.forEach((track, i) => {
-  howls[i] = new Howl({
+  track.howl = new Howl({
     src: [track.src],
-    onend: onEnd,
-
-  });
-})
-
-// function for controlling control buttons
-// on click play play associated file
-// on end play next 
-// if at end stop playback
-
-howls[7].play();
-console.log(howls);
-
-// play track based on track number
-const playTrack = (trackNum) => {
-  alert('a track would play now')
-  
-}
-// v-on:click === @click
-
-/* !!! cant use this function because it assumes play from first track
-const play_audio = tracks => {
-  song = new Howl({
-    src: [tracks[0].src],
-    volume: 0.8,
     onend: function() {
-     tracks.shift();
-      if (tracks.length > 0) {
-        play_audio(file_named);
+      console.log('onend function firing...');
+      if (track.id >= 9) {
+        console.log('Final track. Stopping Howler...');
+        Howler.stop();
+      }
+      if (track.id < 9) {
+        console.log('playing next song...');
+        const nextTrack = track.id +1;
+        const nextTrackLoaded = tracks.filter(obj => {
+          console.log('object id', obj.id);
+          return obj.id === nextTrack;
+        });
+        nextTrackLoaded[0].howl.play();
       }
     }
   });
-  song.play();
+})
+console.log('tracks obj', tracks);
+
+// play track based on track number
+const playTrack = (trackNum) => {
+  Howler.stop();
+  console.log('trying to playing track:', trackNum);
+  const result = tracks.filter(obj => {
+    return obj.id === trackNum;
+  });
+    console.log('result', result)
+    result[0].howl.play()
 }
-*/
+
+const stopTrack = () => {
+  Howler.stop();
+  console.log('stop pressed');
+}
 
 </script>
 
@@ -90,26 +63,35 @@ const play_audio = tracks => {
 
   <main>
     <div class="player-container" >
-      <div v-for="(track, index) in tracks" key="track">
+      <div class="border-container">
+        <div v-for="(track, index) in tracks" key="track">
 
-        <TrackPlayer
-          @togglePlay="playTrack" 
-          :trackNumber="track.id" 
-          :trackName="track.title"
-          :trackSrc="track.src"
-        />
-  
-      </div>
+          <TrackPlayer
+            @togglePlay="playTrack(track.id)"
+            @pressStop="stopTrack()"
+            :trackNumber="track.id" 
+            :trackName="track.title"
+            :isPlaying="track.howl.playing()"
+          />
+    
+        </div>
+      </div> 
     </div>
   </main>
 </template>
 
 <style scoped>
 header {
+  display: flex;
   line-height: 1.5;
   width: 100%;
 }
 
+header .wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
 main .player-container {
   width: 400px;
   height: 400px;
