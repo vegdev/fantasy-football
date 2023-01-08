@@ -95,7 +95,7 @@ main .player-container {
   width: 400px;
   height: 100%;
   margin: auto;
-  padding: 3px;
+  padding: 8px;
   background-color: #BEBEBE;
   box-shadow: 10px 10px #000;
   box-sizing: border-box;
