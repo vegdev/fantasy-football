@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <code>{{ msg }}</code>
+    <img src="img/Fantasy-Football-Wordmark.png"/>
   </div>
 </template>
 

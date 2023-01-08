@@ -25,6 +25,10 @@ a,
 .greetings code {
   text-align: center;
 }
+.greetings img {
+  width: 300px;
+  margin: 2em;
+}
 .track-controls {
   display: flex;
 }
