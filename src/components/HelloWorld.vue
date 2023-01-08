@@ -3,7 +3,7 @@
 
 <template>
   <div class="greetings">
-    <img src="img/Fantasy-Football-Wordmark.png"/>
+    <img src="/img/Fantasy-Football-Wordmark.png"/>
   </div>
 </template>
 
