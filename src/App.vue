@@ -94,7 +94,7 @@ header .wrapper {
 }
 main .player-container {
   width: 400px;
-  height: 400px;
+  height: 100%;
   margin: auto;
   padding: 3px;
   background-color: #BEBEBE;
