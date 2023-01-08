@@ -51,7 +51,7 @@ const handlePressStop = () => {
 .player {
   display: flex;
   justify-content: space-between;
-  padding: 2px;
+  padding: 8px;
   width: 100%;
   height: 30px;
   /* border: 1px solid black; */
