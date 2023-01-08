@@ -56,7 +56,7 @@ const stopTrack = () => {
 <template>
   <header>
     <div class="wrapper">
-      <HelloWorld msg="Fantasy Football" />
+      <HelloWorld />
     </div>
   </header>
 
