@@ -26,7 +26,6 @@ tracks.forEach((track, i) => {
         console.log('playing next song...');
         const nextTrack = track.id +1;
         const nextTrackLoaded = tracks.filter(obj => {
-          console.log('object id', obj.id);
           return obj.id === nextTrack;
         });
         nextTrackLoaded[0].howl.play();
