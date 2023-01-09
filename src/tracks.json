@@ -3,48 +3,48 @@
     "id": 1,
     "artist": "Fantasy Football",
     "title": "Old Toronto",
-    "src": "Audio/01-Old-Toronto.wav"
+    "src": "Audio/01-Old-Toronto.mp3"
   },
   {
     "id": 2,
     "artist": "Fantasy Football",
     "title": "Renegade Serenade",
-    "src": "Audio/02-Renegade-Serenade.wav"
+    "src": "Audio/02-Renegade-Serenade.mp3"
   },
   {
     "id": 3,
     "artist": "Fantasy Football",
     "title": "Golden Auto Mile",
-    "src": "Audio/03-Golden-Auto-Mile.wav"
+    "src": "Audio/03-Golden-Auto-Mile.mp3"
   },
   {
     "id": 4,
     "artist": "Fantasy Football",
     "title": "Passengers on the Tide",
-    "src": "Audio/04-Passengers-on-the-Tide.wav"
+    "src": "Audio/04-Passengers-on-the-Tide.mp3"
   },
   {
     "id": 5,
     "artist": "Fantasy Football",
     "title": "Lightning Land",
-    "src": "Audio/05-Lightning-Land.wav"
+    "src": "Audio/05-Lightning-Land.mp3"
   },
   {
     "id": 6,
     "artist": "Fantasy Football",
     "title": "Neverending Stories",
-    "src": "Audio/06-Neverending-Stories.wav"
+    "src": "Audio/06-Neverending-Stories.mp3"
   },
   {
     "id": 7,
     "artist": "Fantasy Football",
     "title": "Castles Made of Sand",
-    "src": "Audio/07-Castles-Made-of-Sand.wav"
+    "src": "Audio/07-Castles-Made-of-Sand.mp3"
   },
   {
     "id": 8,
     "artist": "Fantasy Football",
     "title": "Windstar",
-    "src": "Audio/08-Windstar.wav"
+    "src": "Audio/08-Windstar.mp3"
   }
 ] 
