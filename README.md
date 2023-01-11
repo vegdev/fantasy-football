@@ -1,3 +1,3 @@
 # fantasy-football
 
-This is the official website for the Fantasy Football band based out of London Ontario Canada
+This is the official website for Fantasy Football, a stadium-garage band based out of London, Ontario Canada.
