@@ -4,7 +4,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #fc0cfc;
+  background-color: inherit;
   font-weight: normal;
 }
 body {
@@ -23,6 +23,7 @@ a,
 .greetings img {
   width: 300px;
   margin: 2em;
+  filter: invert(100%);
 }
 .track-controls {
   display: flex;
