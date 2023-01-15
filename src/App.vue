@@ -63,6 +63,7 @@ const stopTrack = () => {
   <main>
     <div class="player-container" >
       <div class="border-container">
+      <div class="album-name"><code>Lightning Land</code></div><br>
         <div v-for="(track, index) in tracks" key="track">
 
           <TrackPlayer
