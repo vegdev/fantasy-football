@@ -63,6 +63,7 @@ const stopTrack = () => {
   <main>
     <div class="player-container" >
       <div class="border-container">
+      <div class="album-name"><code>Lightning Land</code></div><br>
         <div v-for="(track, index) in tracks" key="track">
 
           <TrackPlayer
@@ -96,7 +97,7 @@ main .player-container {
   height: 100%;
   margin: auto;
   padding: 8px;
-  background-color: #BEBEBE;
+  background-color: #BABABA;
   box-shadow: 10px 10px #000;
   box-sizing: border-box;
 }
