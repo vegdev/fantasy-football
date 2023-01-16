@@ -102,6 +102,10 @@ main .player-container {
   box-sizing: border-box;
 }
 
+.album-name code{
+  font-weight: 900;
+}
+
 @media (min-width: 1024px) {
   header {
     display: flex;
