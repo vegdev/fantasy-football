@@ -11,7 +11,7 @@ ARTIST
 TITLE
 SRC
 */
-Howler.autoUnlock = false;
+//Howler.autoUnlock = false;
 
 const albumTrackTotal = 8;
 // add howl obj to track 
