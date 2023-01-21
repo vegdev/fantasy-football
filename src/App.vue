@@ -11,12 +11,14 @@ ARTIST
 TITLE
 SRC
 */
+Howler.autoUnlock = false;
 
 const albumTrackTotal = 8;
 // add howl obj to track 
 tracks.forEach((track, i) => {
   track.howl = new Howl({
     src: [track.src[0], track.src[1]],
+    html5: true,
     onend: function() {
       console.log('onend function firing...');
       if (track.id >= albumTrackTotal) {
