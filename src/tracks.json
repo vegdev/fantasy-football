@@ -3,7 +3,7 @@
     "id": 1,
     "artist": "Fantasy Football",
     "title": "Old Toronto",
-    "src": "['Audio/01-Old-Toronto.mp3', 'Audio/01-Old-Toronto.ogg']"
+    "src": ["Audio/01-Old-Toronto.mp3", "Audio/01-Old-Toronto.ogg"]
   },
   {
     "id": 2,

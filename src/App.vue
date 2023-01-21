@@ -12,17 +12,18 @@ TITLE
 SRC
 */
 
+const albumTrackTotal = 8;
 // add howl obj to track 
 tracks.forEach((track, i) => {
   track.howl = new Howl({
-    src: [track.src],
+    src: [track.src[0], track.src[1]],
     onend: function() {
       console.log('onend function firing...');
-      if (track.id >= 9) {
+      if (track.id >= albumTrackTotal) {
         console.log('Final track. Stopping Howler...');
         Howler.stop();
       }
-      if (track.id < 9) {
+      if (track.id < albumTrackTotal) {
         console.log('playing next song...');
         const nextTrack = track.id +1;
         const nextTrackLoaded = tracks.filter(obj => {
