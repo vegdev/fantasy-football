@@ -20,6 +20,7 @@ tracks.forEach((track, i) => {
   track.howl = new Howl({
     src: [track.src[0], track.src[1]],
     html5: true,
+    preload: true,
     onend: function() {
       console.log('onend function firing...');
       if (track.id >= tl) {
