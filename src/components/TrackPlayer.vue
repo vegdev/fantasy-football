@@ -62,5 +62,6 @@ const handlePressStop = () => {
   padding-left: 4px;
   padding-right: 4px;
 }
+.pointer {cursor: pointer;}
 
 </style>
