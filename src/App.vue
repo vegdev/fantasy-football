@@ -98,7 +98,8 @@ header .wrapper {
   justify-content: space-around;
 }
 main .player-container {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 100%;
   margin: auto;
   padding: 8px;
@@ -121,6 +122,9 @@ main .player-container {
     display: flex;
     width: 100%;
     justify-content: space-around;
+  }
+  main .player-container {
+    width: 400px;
   }
 }
 </style>

@@ -6,10 +6,11 @@
   padding: 2rem;
   background-color: inherit;
   font-weight: normal;
+  width: 100vw;
 }
 body {
   display: flex;
-  place-items: center;
+  place-items: start;
   box-sizing: border-box;
 }
 a,
