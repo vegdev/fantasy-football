@@ -13,7 +13,8 @@ SRC
 */
 //Howler.autoUnlock = false;
 
-const albumTrackTotal = 8;
+const tl = tracks.length;
+
 // add howl obj to track 
 tracks.forEach((track, i) => {
   track.howl = new Howl({
@@ -21,12 +22,12 @@ tracks.forEach((track, i) => {
     html5: true,
     onend: function() {
       console.log('onend function firing...');
-      if (track.id >= albumTrackTotal) {
+      if (track.id >= tl) {
         console.log('Final track. Stopping Howler...');
         Howler.stop();
       }
-      if (track.id < albumTrackTotal) {
-        console.log('playing next song...');
+      if (track.id < tl) {
+        console.log('playing next song...', track.id);
         const nextTrack = track.id +1;
         const nextTrackLoaded = tracks.filter(obj => {
           return obj.id === nextTrack;
