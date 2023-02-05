@@ -34,14 +34,14 @@ const handlePressStop = () => {
     <code>{{ trackNumber }}. {{ trackName }}</code>
     <div class="track-controls">
       <div v-if="isPlaying == true">
-        <i :id="`pause-track-${trackNumber}`" class="play pointer" v-show="isPlaying" @click="handlePressPause">⏸</i>
+        <Pause :id="`pause-track-${trackNumber}`" class="play pointer" src="pausesvg" v-show="isPlaying" @click="handlePressPause"/>
       </div>
       <div v-else>
-        <i :id="`play-track-${trackNumber}`" class="pause pointer" v-show="!isPlaying" @click="handlePressPlay">▶</i>
+        <Play :id="`play-track-${trackNumber}`" class="pause pointer" src="playsvg" v-show="!isPlaying" @click="handlePressPlay"/>
       </div>
       <div>
         <!-- could also do @click="$emit('togglePlay')" -->
-        <i :id="`stop-track-${trackNumber}`" class="stop pointer" @click="handlePressStop">⏹</i>
+        <Stop :id="`stop-track-${trackNumber}`" class="stop pointer" src="stopsvg" @click="handlePressStop" />
       </div>
     </div>
   </div>
