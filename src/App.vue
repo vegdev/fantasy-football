@@ -39,6 +39,7 @@ tracks.forEach((track, i) => {
   });
 })
 console.log('tracks obj', tracks);
+const id = null;
 
 // play track based on track number
 const playTrack = (trackNum) => {
@@ -48,7 +49,7 @@ const playTrack = (trackNum) => {
     return obj.id === trackNum;
   });
     console.log('result', result)
-    result[0].howl.play()
+    const id = result[0].howl.play()
 }
 
 const stopTrack = () => {
