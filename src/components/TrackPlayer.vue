@@ -1,4 +1,14 @@
 <script setup>
+import { ref } from 'vue'
+import Play from './icons/Play.vue'
+import Pause from './icons/Pause.vue'
+import Stop from './icons/Stop.vue'
+
+const isPlaying = ref(false)
+
+function togglePlay() {
+  isPlaying.value = !isPlaying.value
+}
 
 const props = defineProps({
   trackName: {
