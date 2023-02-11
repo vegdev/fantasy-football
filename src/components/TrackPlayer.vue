@@ -26,16 +26,28 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(['togglePlay', 'pressStop'])
+const emit = defineEmits(['togglePlay', 'pressStop', 'pressPause'])
 
 const handlePressPlay = () => {
+  togglePlay();
   emit('togglePlay', props.trackNumber)
   console.log('props.trackNumber =', props.trackNumber);
 }
 
 const handlePressStop = () => {
+  if(isPlaying) {
+    togglePlay();
+  }else{
+    //do nothing
+  }
   emit('pressStop');
-  console.log('stop has been pressed');
+  console.log('stop has been pressed on track');
+}
+
+const handlePressPause = () => {
+  togglePlay()
+  emit('pressPause')
+  console.log('pause has been pressed on track');
 }
 </script>
 
