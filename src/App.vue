@@ -56,6 +56,12 @@ const stopTrack = () => {
   console.log('stop pressed');
 }
 
+const pauseTrack = () => {
+  //id.pause();
+  Howler.stop();
+  console.log('pause pressed on App');
+}
+
 </script>
 
 <template>
@@ -74,6 +80,7 @@ const stopTrack = () => {
           <TrackPlayer
             @togglePlay="playTrack(track.id)"
             @pressStop="stopTrack()"
+            @pressPause="pauseTrack(track.id)"
             :trackNumber="track.id" 
             :trackName="track.title"
             :isPlaying="track.howl.playing()"
