@@ -1,9 +1,12 @@
 <script setup>
+// import ref() API which can take any data type and make it reactive, it stores the value in an object propery under .value
 import { ref } from 'vue'
+// import our player icon SVGs as vue components
 import Play from './icons/Play.vue'
 import Pause from './icons/Pause.vue'
 import Stop from './icons/Stop.vue'
 
+// set a isPlaying reactice varaible using ref and set its value to false
 const isPlaying = ref(false)
 
 function togglePlay() {
@@ -18,11 +21,6 @@ const props = defineProps({
   trackNumber: {
     type: Number,
     required: true,
-  },
-  isPlaying: {
-    type: Boolean,
-    required: true,
-    default: false
   }
 });
 

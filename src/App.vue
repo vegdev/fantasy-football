@@ -5,7 +5,7 @@ import tracks from './tracks.json';
 import { Howl, Howler } from 'howler';
 
 /*
-SHAPE OF TRACKS: 
+SHAPE OF tracks: 
 ID
 ARTIST
 TITLE
@@ -15,7 +15,7 @@ SRC
 
 const tl = tracks.length;
 
-// add howl obj to track 
+// add howl obj to each track 
 tracks.forEach((track, i) => {
   track.howl = new Howl({
     src: [track.src[0], track.src[1]],
