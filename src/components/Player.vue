@@ -1,20 +1,29 @@
-<script setup>
+<script>
 
-const props = defineProps({
-  trackName: {
-    type: String,
-    required: true,
+export default {
+  props: {
+    trackNumber: Number,
+    trackName: String, 
+    isPlaying: Boolean, // <MyComponent isPlaying /> equivilant of passing :isPlaying="true"
   },
-  trackNumber: {
-    type: Number,
-    required: true,
+  data() {
+    return {}
   },
-  isPlaying: {
-    type: Boolean,
-    required: true,
-    default: false
+  methods: {
+    // increment() {
+    //   this.count++
+    // }
+  },
+  mounted() {
+    // methods can be called in lifecycle hooks, or other methods!
+    // this.increment()
   }
-});
+  created() {
+    // props are exposed on "this"
+    console.log(this.trackNumber, ":", this.trackName)
+  },
+  emits: ['pressPlay', 'pressPause', 'pressStop']
+}
 
 const emit = defineEmits(['togglePlay', 'pressStop'])
 
@@ -30,6 +39,12 @@ const handlePressStop = () => {
 </script>
 
 <template>
+
+  <main>
+    <div class="player-container" >
+      <div class="border-container">
+        <div class="album-name"><code>Lightning Land</code>
+
   <div class="player">
     <code>{{ trackNumber }}. {{ trackName }}</code>
     <div class="track-controls">
