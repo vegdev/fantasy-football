@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, div {
+  font-family: 'VT323', monospace;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+#ff {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 0;
+  margin: auto;
+  height: 100vh;
+}
+
+header .band-name-title {
+  height: auto;
+  margin: 3em;
+  text-align: center;
+  color: white;
+}
+
+.band-name-title img {
+  filter: invert(1);
+  height: 200px;
+  width: auto;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+.main .player-container {
+  background-color: lightgray;
+  width: 500px;
+  padding: 1em;
+  margin: auto; 
+}
+
+.main .player-border {
+  border: 1px solid black;
+}
+
+.main .player-container .album-name {
+  padding: 1em;
+  text-align: center;
+  font-size: 24px;
+}
+
+.main .player-container .tracks {
+  padding: 1em;
+}
+.main .player-container .track {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+.main .player-container .track-info {
+  display: flex;
+}
+.main .player-container .track-controls {
+  display: flex;
+}
+
+.main .player-container .control {
+  margin-right: 8px;
+}
+
+.main .player-container .track .track-controls {
+  display: flex;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "fantasy-football",
+  "version": "1.0.0",
+  "description": "fantasy football band site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vegdev/fantasy-football.git"
+  },
+  "author": "kyle gray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vegdev/fantasy-football/issues"
+  },
+  "homepage": "https://github.com/vegdev/fantasy-football#readme",
+  "dependencies": {
+    "ejs": "^3.1.9"
+  }
+}

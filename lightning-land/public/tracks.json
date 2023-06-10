@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "idname": "old-toronto",
+    "artist": "Fantasy Football",
+    "title": "Old Toronto",
+    "src": ["public/audio/01-Old-Toronto.mp3", "public/audio/01-Old-Toronto.ogg"]
+  },
+  {
+    "id": 2,
+    "idname": "renegade-serenage",
+    "artist": "Fantasy Football",
+    "title": "Renegade Serenade",
+    "src": ["public/audio/02-Renegade-Serenade.mp3", "public/audio/02-Renegade-Serenade.ogg"]
+  },
+  {
+    "id": 3,
+    "idname": "golden-auto-mile",
+    "artist": "Fantasy Football",
+    "title": "Golden Auto Mile",
+    "src": ["public/audio/03-Golden-Auto-Mile.mp3", "public/audio/03-Golden-Auto-Mile.ogg"]
+  },
+  {
+    "id": 4,
+    "idname": "passengers-on-the-tide",
+    "artist": "Fantasy Football",
+    "title": "Passengers on the Tide",
+    "src": ["public/audio/04-Passengers-on-the-Tide.mp3", "public/audio/04-Passengers-on-the-Tide.ogg"]
+  },
+  {
+    "id": 5,
+    "idname": "lighting-land",
+    "artist": "Fantasy Football",
+    "title": "Lightning Land",
+    "src": ["public/audio/05-Lightning-Land.mp3", "public/audio/05-Lightning-Land.ogg"]
+  },
+  {
+    "id": 6,
+    "idname": "neverending-stories",
+    "artist": "Fantasy Football",
+    "title": "Neverending Stories",
+    "src": ["public/audio/06-Neverending-Stories.mp3", "public/audio/06-Neverending-Stories.ogg"]
+  },
+  {
+    "id": 7,
+    "idname": "castles-made-of-sand",
+    "artist": "Fantasy Football",
+    "title": "Castles Made of Sand",
+    "src": ["public/audio/07-Castles-Made-of-Sand.mp3", "public/audio/07-Castles-Made-of-Sand.ogg"]
+  },
+  {
+    "id": 8,
+    "idname": "windstar",
+    "artist": "Fantasy Football",
+    "title": "Windstar",
+    "src": ["public/audio/08-Windstar.mp3", "public/audio/08-Windstar.ogg"]
+  }
+] 

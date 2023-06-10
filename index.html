@@ -1,13 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasy Football</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to Fantasy Football!</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+    h1, h2, h3, h4, h5, h6, p, a {
+      font-family: 'VT323', monospace;
+      letter-spacing: 4px;
+      color:white;
+    }
+    body {
+      background-color: black;
+    }
+    .wrapper{
+      max-width: 471px;
+    }
+    .title {
+      text-transform: uppercase;
+      color: white;
+    }
+    .links {
+      display:flex;
+      flex-direction: column;
+    }
+    .links a {
+      margin: 0.5em;
+      color: lightgray;
+      text-decoration: none;
+    }
+    .links a:hover {
+      color:white;
+      text-shadow: #FFF 1px 0 2px;
+    }
+    .vcr-info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-end;
+    }
+    .vcr-info p{
+      margin: 0 !important;
+    }
+    .time {
+      display: flex;
+      flex-direction: row;
+    }
+    @media only screen and (min-width: 768px) {
+      .wrapper {
+        margin: auto;
+      }
+      .spacer {
+        height: 100%;
+        max-height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper"> 
+    <div class="title">
+      <h1>///// FANTASY FOOTBALL /////</h1>
+    </div>
+
+    <div class="links">
+      <a href="https://graylabs.ca/fantasy-football/lightning-land">> Lightning Land LP</a>
+      <a href="#">> Chill Indie Beats to Study To EP</a>
+      <a href="https://fantasyfootball.bandcamp.com/album/lightning-land">> Bandcamp</a>
+      <a href="https://youtube.com/@FantasyFootballBand">> Youtube</a>
+    </div>
+    <div class="spacer"></div>
+    <div class="vcr-info">
+      <div class="time"><p id="hour" class="part-time hour">12<p>:<p id="minute" class="part-time">00</p></div>
+      <p id="date">January 1 1999</p>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    const getMyDate = function() {
+      const currentDate = new Date();
+      
+      // get month
+      let monthNumber = currentDate.getMonth();
+      let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      let month = monthNames[monthNumber];
+
+      // get day
+      let day = currentDate.getDate();
+
+      // get year
+      let year = currentDate.getFullYear();
+      
+      let ourDate = `${month} ${day} ${year}`
+
+      return ourDate;
+    }
+
+    function formatTime() {
+      var currentTime = new Date();
+      console.log(currentTime.getTimezoneOffset())
+      var hours = currentTime.getHours();
+      var minutes = currentTime.getMinutes();
+      var amPm = hours >= 12 ? "PM" : "AM";
+
+      // Convert to 12-hour format
+      hours = hours % 12;
+      hours = hours ? hours : 12; // "0" should be converted to "12"
+
+      // Add leading zeros to minutes if necessary
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+
+      var formattedTime = amPm + " " + hours + ":" + minutes;
+      return formattedTime;
+    }
+
+    setInterval(function(){
+      myDate = getMyDate();
+      // myTIme = formatTime();
+      document.getElementById('date').innerHTML = myDate;
+      // document.getElementById('time').innerHTML = myTIme;
+    }, 2000);
+
+    var hour = document.getElementById('hour');
+    var minute = document.getElementById('minute');
+    setInterval(function() {
+      hour.style.opacity = (hour.style.opacity == 0 ? 1 : 0);
+      minute.style.opacity = (minute.style.opacity == 0 ? 1 : 0);
+    }, 1000);
+  </script>
+
+</body>
 </html>
