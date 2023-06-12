@@ -8,7 +8,7 @@
   },
   {
     "id": 2,
-    "idname": "renegade-serenage",
+    "idname": "renegade-serenade",
     "artist": "Fantasy Football",
     "title": "Renegade Serenade",
     "src": ["public/audio/02-Renegade-Serenade.mp3", "public/audio/02-Renegade-Serenade.ogg"]
@@ -29,7 +29,7 @@
   },
   {
     "id": 5,
-    "idname": "lighting-land",
+    "idname": "lightning-land",
     "artist": "Fantasy Football",
     "title": "Lightning Land",
     "src": ["public/audio/05-Lightning-Land.mp3", "public/audio/05-Lightning-Land.ogg"]
